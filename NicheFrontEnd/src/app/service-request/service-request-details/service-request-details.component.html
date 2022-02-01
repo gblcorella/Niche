@@ -1,0 +1,26 @@
+<div *ngIf="serviceRequest">
+  <div><label>First Name: </label> {{ serviceRequest.firstName }}</div>
+  <div><label>Last Name: </label> {{ serviceRequest.lastName }}</div>
+  <div><label>Email: </label> {{ serviceRequest.emailId }}</div>
+  <div><label>Active: </label> {{ serviceRequest.active }}</div>
+
+  <span
+    class="button is-small btn-primary"
+    *ngIf="serviceRequest.active"
+    (click)="updateActive(false)"
+    >Inactive</span
+  >
+
+  <span
+    class="button is-small btn-primary"
+    *ngIf="!serviceRequest.active"
+    (click)="updateActive(true)"
+    >Active</span
+  >
+
+  <span class="button is-small btn-danger" (click)="deleteServiceRequest()"
+    >Delete</span
+  >
+
+  <hr />
+</div>

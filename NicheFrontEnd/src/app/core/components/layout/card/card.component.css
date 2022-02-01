@@ -1,0 +1,12 @@
+.card-title{
+    text-align: center;
+}
+.card-text{
+    text-align: center;
+}
+
+.card:hover{
+    transform: translateY(-15px);
+    transition: 1s ease;
+    cursor: pointer;
+}

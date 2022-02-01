@@ -1,0 +1,33 @@
+<div class="container py-4">
+  <div class="col-md-6 offset-md-3 pt-4">
+    <h1 class="text-center">Login</h1>
+  </div>
+  <div class="col-md-6 offset-md-3 py-4">
+    <div [hidden]="submitted">
+      <form (ngSubmit)="login()">
+        <div class="form-group input-group-lg">
+          <input
+            class="form-control input-lg"
+            type="text"
+            placeholder="Username"
+            name="username"
+            [(ngModel)]="loginData.username"
+          />
+          <br />
+        </div>
+        <div class="form-group input-group-lg">
+          <input
+            class="form-control input-lg"
+            type="password"
+            placeholder="Password"
+            name="password"
+            [(ngModel)]="loginData.password"
+          />
+        </div>
+        <div class="py-4">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

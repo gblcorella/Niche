@@ -1,0 +1,32 @@
+<div class="panel panel-default container py-4">
+  <div class="panel-heading py-4">
+    <h1>Service Requests</h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Subject</th>
+          <th>Request</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let serviceRequest of serviceRequests | async">
+          <td>{{ serviceRequest.emailId }}</td>
+          <td>{{ serviceRequest.subject }}</td>
+          <td>{{ serviceRequest.request }}</td>
+          <td>
+            <button
+              class="delete-button btn-danger"
+              (click)="deleteServiceRequest(serviceRequest.id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

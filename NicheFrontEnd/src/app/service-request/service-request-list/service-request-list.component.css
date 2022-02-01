@@ -1,0 +1,11 @@
+.delete-button{
+    border-radius: 15%;
+}
+
+.delete-button:hover{
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+}
